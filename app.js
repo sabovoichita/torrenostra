@@ -1,4 +1,4 @@
-// Select main elements
+// ========== SELECT DOM ELEMENTS ==========
 const wrapper = document.querySelector(".sliderWrapper");
 const menuButtons = document.querySelectorAll(".menuButton");
 const selectProduct = document.querySelectorAll(".selectProduct");
@@ -11,7 +11,7 @@ const currentProductPrice = document.querySelector(".productPrice");
 const currentProductColors = document.querySelectorAll(".color");
 const currentProductSizes = document.querySelectorAll(".size");
 
-// Products data
+// ========== PRODUCT DATA ==========
 const products = [
   {
     id: 1,
@@ -49,7 +49,6 @@ const products = [
       { code: "purple", img: "./images/p2-purple.png" },
     ],
   },
-
   {
     id: 4,
     title: "Wind Chime",
@@ -64,59 +63,92 @@ const products = [
   },
 ];
 
-// Store the currently selected product
 let choosenProduct = products[0];
 
-/**
- * Update the displayed product info (title, price, image, colors)
- */
+// ========== FUNCTION: Update Product Display ==========
 function updateProduct(index) {
   choosenProduct = products[index];
 
-  // Update title, price, and main image
   currentProductTitle.textContent = choosenProduct.title;
   currentProductPrice.textContent = choosenProduct.price + "€";
   currentProductImg.src = choosenProduct.colors[0].img;
 
-  // Update available colors
-  currentProductColors.forEach((color, i) => {
-    const colorData = choosenProduct.colors[i];
-    if (colorData) {
-      color.style.backgroundColor = colorData.code;
-      color.style.display = "inline-block";
-    } else {
-      color.style.display = "none";
-    }
-  });
-
-  // Set initial background color
+  updateColorOptions();
   product.style.backgroundColor = choosenProduct.colors[0].code;
+  resetSizeSelection();
 }
 
-// Change product image and background when color is clicked
-currentProductColors.forEach((color, index) => {
-  color.addEventListener("click", () => {
-    if (choosenProduct.colors[index]) {
-      currentProductImg.src = choosenProduct.colors[index].img;
-      product.style.backgroundColor = choosenProduct.colors[index].code;
-      productDetails.style.boxShadow = "0 0 20px rgba(0, 0, 0, 0.5)";
+// ========== FUNCTION: Update Color Buttons ==========
+function updateColorOptions() {
+  currentProductColors.forEach((colorElement, i) => {
+    const colorData = choosenProduct.colors[i];
+    if (colorData) {
+      colorElement.style.backgroundColor = colorData.code;
+      colorElement.style.display = "inline-block";
+    } else {
+      colorElement.style.display = "none";
     }
   });
-});
+}
 
-// Handle slider navigation (menu buttons)
-menuButtons.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    wrapper.style.transform = `translateX(${-100 * index}vw)`;
+// ========== FUNCTION: Handle Color Click ==========
+function setupColorEvents() {
+  currentProductColors.forEach((color, index) => {
+    color.addEventListener("click", () => {
+      if (choosenProduct.colors[index]) {
+        currentProductImg.src = choosenProduct.colors[index].img;
+        product.style.backgroundColor = choosenProduct.colors[index].code;
+        productDetails.style.boxShadow = "0 0 20px rgba(0, 0, 0, 0.5)";
+      }
+    });
   });
-});
+}
 
-// Handle product selection
-selectProduct.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    updateProduct(index);
+// ========== FUNCTION: Handle Size Click ==========
+function setupSizeEvents() {
+  currentProductSizes.forEach((size) => {
+    size.addEventListener("click", () => {
+      resetSizeSelection();
+      size.style.backgroundColor = "black";
+      size.style.color = "white";
+    });
   });
-});
+}
 
-// Initialize with the first product
-updateProduct(0);
+// ========== FUNCTION: Reset Sizes ==========
+function resetSizeSelection() {
+  currentProductSizes.forEach((s) => {
+    s.style.backgroundColor = "white";
+    s.style.color = "black";
+  });
+}
+
+// ========== FUNCTION: Setup Slider Buttons ==========
+function setupSliderEvents() {
+  menuButtons.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      wrapper.style.transform = `translateX(${-100 * index}vw)`;
+    });
+  });
+}
+
+// ========== FUNCTION: Setup Product Selector Buttons ==========
+function setupProductSelection() {
+  selectProduct.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      updateProduct(index);
+    });
+  });
+}
+
+// ========== INIT FUNCTION ==========
+function init() {
+  setupColorEvents();
+  setupSizeEvents();
+  setupSliderEvents();
+  setupProductSelection();
+  updateProduct(0);
+}
+
+// ========== RUN ==========
+init();
