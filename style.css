@@ -246,6 +246,7 @@ nav {
 }
 
 .payment {
+  display: none;
   width: 500px;
   height: 500px;
   background-color: #fff;
@@ -256,7 +257,7 @@ nav {
   right: 0;
   margin: auto;
   padding: 10px 50px;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   box-shadow: 10px -17px 17px -7px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 10px -17px 17px -7px rgba(0, 0, 0, 0.6);
