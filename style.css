@@ -88,16 +88,17 @@ nav {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
   height: 100vh;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .sliderWrapper {
   display: flex;
   width: 500vw;
   height: 100%;
+  transition: all 1.5s ease-in-out;
 }
 .sliderItem {
   width: 100vw;
-  /* height: 100%; */
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,4 +204,9 @@ nav {
 .sliderItem:nth-child(5) .sliderDesc,
 .sliderItem:nth-child(5) .sliderTitle {
   color: cornflowerblue;
+}
+.imagesArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
