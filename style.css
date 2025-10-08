@@ -37,7 +37,7 @@
 
 body {
   /* background-color: black; */
-  color: blue;
+  color: black;
   font-family: "Lato", sans-serif;
   padding: 0;
   margin: 0;
@@ -238,6 +238,7 @@ nav {
 }
 
 .product {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   height: 100vh;
   background-color: whitesmoke;
   position: relative;
@@ -256,10 +257,14 @@ nav {
 .productTitle {
   font-size: 75px;
   font-weight: 900;
+  color: grey;
 }
 .productDesc {
   font-style: 24px;
   color: gray;
+}
+.productPrice {
+  color: grey;
 }
 .colors,
 .sizes {
@@ -273,6 +278,8 @@ nav {
   background-color: black;
   margin-right: 10px;
   cursor: pointer;
+  border: 1px solid #333;
+  display: inline-block;
 }
 .color:nth-child(2) {
   background-color: white;
@@ -280,6 +287,9 @@ nav {
 }
 .color:nth-child(3) {
   background-color: burlywood;
+}
+.color:nth-child(4) {
+  background-color: turquoise;
 }
 .color:last-child {
   background-color: purple;
@@ -302,4 +312,12 @@ nav {
 .productButton:hover {
   background-color: white;
   color: black;
+}
+.selectProduct {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
 }
