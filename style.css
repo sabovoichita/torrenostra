@@ -244,6 +244,42 @@ nav {
   position: relative;
   clip-path: polygon(0 0, 88% 0, 100% 100%, 0% 100%);
 }
+
+.payment {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px -17px 17px -7px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 10px -17px 17px -7px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 10px -17px 17px -7px rgba(0, 0, 0, 0.6);
+}
+.payTitle {
+  font-size: 20px;
+  color: lightgrey;
+}
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+.payInput {
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+.payInput::placeholder {
+  color: lightgray;
+}
+
 .productImg {
   width: 50%;
 }
