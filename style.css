@@ -210,3 +210,29 @@ nav {
   align-items: center;
   justify-content: space-around;
 }
+.reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.reviewImg {
+  width: 100px;
+  height: 100px;
+}
+.reviewTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+.reviewDesc {
+  color: grey;
+  width: 50%;
+  height: 100px;
+}
