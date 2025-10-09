@@ -11,6 +11,10 @@ const currentProductPrice = document.querySelector(".productPrice");
 const currentProductColors = document.querySelectorAll(".color");
 const currentProductSizes = document.querySelectorAll(".size");
 
+const productButton = document.querySelector(".productButton");
+const payment = document.querySelector(".payment");
+const close = document.querySelector(".close");
+
 // ========== PRODUCT DATA ==========
 const products = [
   {
@@ -141,12 +145,26 @@ function setupProductSelection() {
   });
 }
 
+// ========== FUNCTION: Close/Open Payment Modal ==========
+function openPayment() {
+  productButton.addEventListener("click", () => {
+    payment.style.display = "flex";
+  });
+}
+function closePayment() {
+  close.addEventListener("click", () => {
+    payment.style.display = "none";
+  });
+}
+
 // ========== INIT FUNCTION ==========
 function init() {
   setupColorEvents();
   setupSizeEvents();
   setupSliderEvents();
   setupProductSelection();
+  openPayment();
+  closePayment();
   updateProduct(0);
 }
 
