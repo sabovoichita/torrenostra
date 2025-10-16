@@ -397,3 +397,15 @@ label {
   color: white;
   letter-spacing: 1px;
 }
+.gallery {
+  padding: 50px;
+  display: flex;
+  max-width: 1200px;
+}
+.galleryItem {
+  flex: 1;
+  padding: 40px;
+}
+.galleryImg {
+  width: 100%;
+}
