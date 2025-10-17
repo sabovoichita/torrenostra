@@ -531,3 +531,183 @@ label {
   color: white;
   letter-spacing: 1px;
 }
+
+/* ========================= */
+/* RESPONSIVE DESIGN SECTION */
+/* ========================= */
+
+/* Large tablets / small laptops */
+@media (max-width: 1200px) {
+  .menuItem {
+    margin-right: 30px;
+    font-size: 18px;
+  }
+
+  .productDetails {
+    width: 50%;
+    top: 5%;
+  }
+
+  .productTitle {
+    font-size: 50px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  nav {
+    padding: 15px 30px;
+  }
+
+  .navBottom {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .slider {
+    height: 70vh;
+  }
+
+  .sliderTitle {
+    font-size: 30px;
+  }
+
+  .sliderDesc {
+    font-size: 20px;
+  }
+
+  .visitButton {
+    font-size: 20px;
+  }
+
+  .reviews {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .galleryItems {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .product {
+    height: auto;
+    clip-path: none;
+    padding-bottom: 30px;
+  }
+
+  .productImg {
+    width: 80%;
+  }
+
+  .productDetails {
+    width: 100%;
+    position: static;
+    padding: 20px;
+  }
+
+  .productTitle {
+    font-size: 40px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .navTop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .limitedOffer {
+    font-size: 16px;
+  }
+
+  .menuItem {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  .slider {
+    height: 60vh;
+    clip-path: none;
+  }
+
+  .sliderBg {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .sliderTitle {
+    font-size: 24px;
+  }
+
+  .sliderDesc {
+    font-size: 16px;
+  }
+
+  .reviewsSection,
+  .gallery,
+  .videosSection {
+    padding: 20px;
+  }
+
+  .video {
+    padding-top: 56.25%;
+  }
+
+  .payButton {
+    bottom: 0;
+    position: relative;
+  }
+
+  .payment {
+    width: 90%;
+    height: auto;
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav {
+    padding: 10px 20px;
+  }
+
+  .menuItem {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .sliderTitle {
+    font-size: 20px;
+  }
+
+  .sliderDesc {
+    font-size: 14px;
+  }
+
+  .productTitle {
+    font-size: 28px;
+  }
+
+  .productDesc {
+    font-size: 14px;
+  }
+
+  .videos {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryItems {
+    grid-template-columns: 1fr;
+  }
+}
