@@ -409,3 +409,16 @@ label {
 .galleryImg {
   width: 100%;
 }
+
+.videos {
+  padding: 50px;
+  display: flex;
+  max-width: 1200px;
+}
+.video {
+  width: 100%;
+}
+.videoLink {
+  color: #333;
+  text-decoration: none;
+}

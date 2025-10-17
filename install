@@ -1,0 +1,17 @@
+[33m3b47541[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m videos
+[33mdf1978f[m videos
+[33m8505fe6[m gallery
+[33m69c3b96[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m card information and payment to display and hide on clicking the buy button
+[33m6a22dd7[m hide payment for now
+[33m5f14c72[m payment modal
+[33md1ca823[m cleaned code into functions
+[33mf633711[m add products and functions to choose colors
+[33m3ee683e[m add product section
+[33m642a014[m reviews
+[33mc8f0d1c[m slider animation
+[33m7362c62[m add live link to readme
+[33m103752b[m slider
+[33m6b70755[m navbar
+[33m868ce2b[m add images folder
+[33md24454c[m initial structure
+[33mfa5d0d2[m Initial commit
