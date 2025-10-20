@@ -34,6 +34,9 @@
   font-weight: 900;
   font-style: normal;
 }
+* {
+  margin: 0;
+}
 
 body {
   /* background-color: black; */
@@ -45,6 +48,9 @@ body {
 body section {
   padding-left: 20px;
 }
+
+/* ================================== section nav========================== */
+
 nav {
   background-color: rgb(232, 232, 235);
   color: black;
@@ -55,90 +61,125 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+
+.navleft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+.navright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.navleft .navItem,
+.navright .search,
+.navright .toggle {
+  margin: 0 10px;
+}
+
+.navItem img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.limitedOffer {
+  font-size: 20px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
 .search {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  background-color: wheat;
   border-radius: 10px;
+  padding: 5px 10px;
 }
 .searchInput {
   border: none;
-  background-color: wheat;
+  background: none;
+  outline: none;
+  padding: 5px;
 }
 .searchInput::placeholder {
   color: black;
 }
-.limitedOffer {
-  font-size: 20px;
-  border-bottom: 2px solid black;
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 .navBottom {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 .menuItem {
-  margin-right: 50px;
-  cursor: pointer;
+  margin-right: 10px;
   color: black;
-  font-size: 20px;
-  font-weight: 600;
-  /* background-color: cornflowerblue; */
-  /* border: 1px solid black; */
-  z-index: 1;
-  cursor: pointer;
   border-radius: 10px;
   padding: 5px 10px;
-  box-shadow: 10px 17px 17px 7px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 10px 17px 17px -7px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 10px -17px 17px -7px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 5px 10px 7px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
+/* ================================== Section Slider Section========================== */
+
 .slider {
-  background: url(./images/b1.jpg);
+  /* background: url(./images/b1.jpg); */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
-  height: 100vh;
-  position: sticky;
-  overflow: hidden;
+  display: flex;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px; */
   box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .imagesArea {
   display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
+  align-items: end;
+  justify-content: space-around;
   box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.imagesAreaH1 {
+  /* position: absolute; */
+  /* left: 0; */
+  /* bottom: 0; */
+  color: black;
+  z-index: 2;
+  /* margin-top: 10px; */
+  /* padding-bottom: 30px; */
 }
 .changeButtons {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 2;
+  /* position: absolute; */
+  /* right: 0; */
+  bottom: 0;
+  z-index: 1;
 }
 .menuButton {
   margin-right: 10px;
   cursor: pointer;
   color: black;
-  font-size: 15px;
-  font-weight: 600;
-  /* background-color: cornflowerblue; */
   z-index: 1;
   cursor: pointer;
   border-radius: 10px;
-  padding: 5px 10px;
-  box-shadow: 10px 17px 17px 7px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 10px 17px 17px -7px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 10px -17px 17px -7px rgba(0, 0, 0, 0.6);
+  border: 1px solid transparent;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
-.imagesArea h1 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: white;
-  z-index: 2;
-  margin-top: 10px;
-  padding-bottom: 30px;
-}
+
 .sliderWrapper {
   display: flex;
   width: 500vw;
@@ -146,7 +187,7 @@ nav {
   transition: all 1.5s ease-in-out;
 }
 .sliderItem {
-  width: 100vw;
+  width: 50vw;
   height: 100%;
   display: flex;
   align-items: center;
@@ -154,15 +195,7 @@ nav {
   position: relative;
 }
 .sliderBg {
-  width: 750px;
-  height: 750px;
   border-radius: 50%;
-  position: absolute;
-  background-color: cornflowerblue;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .sliderImg {
   max-width: 100%;
@@ -254,11 +287,8 @@ nav {
 .sliderItem:nth-child(5) .sliderTitle {
   color: cornflowerblue;
 }
-.imagesArea {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
+
+/* ================================== Section Reviews Section ========================== */
 .reviewsSection {
   display: block;
   box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
@@ -290,6 +320,8 @@ nav {
   width: 50%;
 }
 
+/* ================================== Section Gallery Section ========================== */
+
 .gallery {
   padding: 50px;
   display: block;
@@ -311,6 +343,8 @@ nav {
 .galleryImg {
   width: 100%;
 }
+
+/* ================================== Section Video Section ========================== */
 
 .videoLink {
   color: #333;
@@ -370,6 +404,7 @@ nav {
 .video:hover .overlay {
   opacity: 1;
 }
+/* ================================== Section Payment & Product Section========================== */
 
 .product {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -532,9 +567,7 @@ label {
   letter-spacing: 1px;
 }
 
-/* ========================= */
-/* RESPONSIVE DESIGN SECTION */
-/* ========================= */
+/* ========================= SECTION RESPONSIVE DESIGN SECTION ========================= */
 
 /* Large tablets / small laptops */
 @media (max-width: 1200px) {
