@@ -118,7 +118,20 @@ nav {
   border-radius: 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  cursor: pointer;
+  position: relative;
+}
+.toggleIcon {
+  color: goldenrod;
+}
+.toggleBall {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
   cursor: pointer;
 }
 .navBottom {
