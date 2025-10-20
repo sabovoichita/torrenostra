@@ -157,7 +157,30 @@ function closePayment() {
   });
 }
 
-// ========== INIT FUNCTION ==========
+// ========== FUNCTION: SetupImageOverlay ==========
+function setupImageOverlay() {
+  const overlay = document.getElementById("imageOverlay");
+  const fullImage = document.getElementById("fullImage");
+  const closeBtn = document.getElementById("closeBtn");
+  const galleryImages = document.querySelectorAll(".galleryImg");
+  console.log("here");
+  galleryImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      fullImage.src = img.src;
+      overlay.style.display = "flex";
+      console.log("image clicked");
+    });
+  });
+  closeBtn.addEventListener("click", () => {
+    overlay.style.display = "none";
+  });
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) overlay.style.display = "none";
+  });
+}
+
+// ========== FUNCTION: Init ==========
+
 function init() {
   setupColorEvents();
   setupSizeEvents();
@@ -166,6 +189,7 @@ function init() {
   openPayment();
   closePayment();
   updateProduct(0);
+  setupImageOverlay();
 }
 
 // ========== RUN ==========

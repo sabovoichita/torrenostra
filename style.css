@@ -322,6 +322,10 @@ nav {
 .reviewImg {
   width: 100%;
   border-radius: 10px;
+  transition: all 1s ease-in-out;
+}
+.reviewImg:hover {
+  transform: scale(1.2);
 }
 .reviewTitle {
   font-size: 20px;
@@ -347,16 +351,85 @@ nav {
   gap: 20px;
 }
 .galleryItem {
-  flex: 1;
+  position: relative;
+  overflow: hidden;
   padding: 20px;
   border-radius: 10px;
-
+  cursor: pointer;
+  transition: transform 0.3s ease;
   box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.galleryItem:hover {
+  transform: scale(1.03);
 }
 .galleryImg {
   width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+.imageOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+.closeBtn:hover {
+  color: red;
+}
+#imageOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+#fullImage {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+#fullImage:hover {
+  transform: scale(1.02);
+}
+#closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 50%;
+  padding: 8px 14px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+#closeBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
 /* ================================== Section Video Section ========================== */
 
 .videoLink {
