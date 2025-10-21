@@ -37,77 +37,146 @@
 * {
   margin: 0;
 }
+:root {
+  --space-xs: 10px;
+  --space-sm: 20px;
+  --space-md: 40px;
+  --space-lg: 80px;
 
+  --light0: #fff;
+  --light1: #f1f1f1;
+  --light2: #f9f9f9;
+  --light3: #f9f9fb;
+  --light4: #ffffff;
+  --light5: #ccc;
+  --light6: #eee;
+
+  --dark0: #000;
+  --dark1: #111;
+  --dark2: #222;
+  --dark3: #333;
+  --dark4: #444;
+  --dark5: #666;
+}
+section {
+  padding: var(--space-lg) var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+section:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+  letter-spacing: 1px;
+}
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
 body.dark {
-  background-color: black;
-  color: white;
+  background-color: var(--dark1);
+  color: var(--light6);
   transition: all 0.3s ease;
 }
 body.light {
-  background-color: white;
-  color: black;
+  background-color: var(--light3);
+  color: var(--dark2);
   transition: all 0.3s ease;
 }
 
 body.dark .menuItem {
-  color: white;
-  border: 2px solid white;
+  color: var(--light0);
+  border: 2px solid var(--light0);
+}
+body.dark .menuItem:hover {
+  background-color: var(--light1);
+  color: var(--dark1);
 }
 body.light .menuItem {
-  color: black;
-  border: 2px solid black;
-  background-color: white;
+  color: var(--dark2);
+  border: 2px solid var(--dark2);
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
 body.dark .search {
-  color: black;
-  background-color: white;
+  color: var(--dark1);
+  background-color: var(--light4);
+  border: none;
 }
 body.light .search {
-  color: white;
+  color: var(--light0);
 }
 body.dark .searchInput::placeholder {
-  color: black;
   background-color: transparent;
   opacity: 0.8;
+  color: var(--dark2);
 }
 body.light .searchInput::placeholder {
-  color: white;
+  color: var(--light0);
   opacity: 0.7;
 }
 
 body.dark .limitedOffer {
-  color: white;
-  border-bottom: 2px solid white;
+  color: var(--light1);
+  border-bottom: 2px solid var(--light1);
 }
 
 body.light .limitedOffer {
-  color: black;
-  border-bottom: 2px solid black;
-  background-color: white;
+  color: var(--dark0);
+  border-bottom: 2px solid var(--dark0);
+  background-color: var(--light0);
 }
 
 body.dark .visitButton {
-  background-color: white;
-  color: black;
+  background-color: var(--light1);
+  color: var(--dark1);
+  border: none;
+  transition: background-color 0.3s ease;
 }
 body.light .visitButton {
-  background-color: black;
-  color: white;
+  background-color: var(--dark0);
+  color: var(--light0);
+}
+/* body.dark .visitButton:hover {
+  background-color: var(--light5);
+} */
+body.dark .toggle {
+  background-color: var(--dark2);
+  border: 2px solid var(--light1);
+}
+body.dark .toggleBall {
+  background-color: var(--light1);
 }
 body.light .imagesAreaH1 {
-  background-color: white;
-  color: black;
+  background-color: var(--light0);
+  color: var(--dark0);
 }
 body.dark .imagesAreaH1 {
-  background-color: black;
-  color: white;
+  background-color: var(--dark0);
+  color: var(--light0);
+}
+body.light .nav,
+body.light .navTop,
+body.light .navBottom {
+  background-color: var(--light4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.nav,
+.menuItem,
+.search,
+.visitButton,
+.toggle,
+.toggleBall,
+.limitedOffer {
+  transition: all 0.4s ease;
 }
 
 .toggle {
   width: 50px;
   height: 24px;
   border-radius: 30px;
-  background-color: black;
+  background-color: var(--dark0);
   position: relative;
   cursor: pointer;
   display: flex;
@@ -118,14 +187,14 @@ body.dark .imagesAreaH1 {
 }
 
 .toggle.active {
-  background-color: white;
+  background-color: var(--light0);
 }
 
 .toggleBall {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: black;
+  background-color: var(--dark0);
   position: absolute;
   right: 2px;
   top: 2px;
@@ -134,7 +203,7 @@ body.dark .imagesAreaH1 {
 
 .toggle.active .toggleBall {
   transform: translateX(-30px);
-  background-color: black;
+  background-color: var(--dark0);
 }
 .toggleIcon {
   color: goldenrod;
@@ -144,12 +213,12 @@ body.dark .imagesAreaH1 {
 
 nav {
   /* background-color: rgb(232, 232, 235); */
-  color: white;
+  color: var(--light0);
   padding: 20px 50px;
 }
 .navTop {
   /* background-color: rgb(232, 232, 235); */
-  color: white;
+  color: var(--light0);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -184,14 +253,14 @@ nav {
 
 .limitedOffer {
   font-size: 20px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--light0);
   cursor: pointer;
 }
 
 .search {
   display: flex;
   align-items: center;
-  background-color: wheat;
+  background-color: goldenrod;
   border-radius: 10px;
   padding: 5px 10px;
 }
@@ -202,7 +271,7 @@ nav {
   padding: 5px;
 }
 .searchInput::placeholder {
-  color: black;
+  color: var(--dark0);
 }
 
 .navBottom {
@@ -213,14 +282,14 @@ nav {
 }
 .menuItem {
   margin-right: 10px;
-  color: white;
-  background-color: black;
+  color: var(--light0);
+  background-color: var(--dark0);
 
   border-radius: 10px;
   padding: 5px 10px;
   box-shadow: 10px 5px 10px 7px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid var(--light0);
 }
 
 /* ================================== Section Slider Section========================== */
@@ -233,7 +302,7 @@ nav {
   z-index: 2;
 }
 .imagesAreaH1 {
-  color: black;
+  color: var(--dark0);
   z-index: 2;
 }
 .changeButtons {
@@ -243,7 +312,7 @@ nav {
 .menuButton {
   margin-right: 10px;
   cursor: pointer;
-  color: black;
+  color: var(--dark0);
   z-index: 1;
   cursor: pointer;
   border-radius: 10px;
@@ -306,26 +375,25 @@ nav {
 .sliderDesc,
 .visitButton {
   position: absolute;
-  color: white;
+  color: var(--light0);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
   font-weight: bold;
 }
 .sliderTitle {
-  top: 10%;
+  top: 15%;
   left: 10%;
-  font-size: 3rem;
-  font-weight: bold;
+  margin-bottom: 15px;
 }
 .sliderDesc {
-  top: 35%;
-  font-size: 1.5rem;
+  top: 30%;
+  left: 10%;
 }
 .visitButton {
   right: 10%;
-  bottom: 20%;
+  bottom: 15%;
   padding: 10px 20px;
-  background-color: #fff;
-  color: white;
+  background-color: var(--light0);
+  color: var(--light0);
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -334,8 +402,8 @@ nav {
   transition: all 0.3s ease;
 }
 .visitButton:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--dark0);
+  color: var(--light0);
 }
 .sliderItem:nth-child(1) .sliderBg,
 .sliderItem:nth-child(1) .visitButton {
@@ -387,7 +455,7 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   font-size: 80px;
-  color: lightgray;
+  color: var(--light5);
   opacity: 0.7;
   cursor: pointer;
   z-index: 10;
@@ -419,7 +487,7 @@ nav {
   align-items: center;
   text-align: center;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  padding: var(--space-sm);
 }
 .reviewImg {
   width: 100%;
@@ -432,11 +500,12 @@ nav {
 .reviewTitle {
   font-size: 20px;
   font-weight: 600;
-  margin: 10px;
+  margin-top: var(--space-sm);
 }
 .reviewDesc {
-  color: grey;
-  width: 50%;
+  color: var(--dark5);
+  width: 80%;
+  line-height: 1.4;
 }
 
 /* ================================== Section Gallery Section ========================== */
@@ -450,7 +519,12 @@ nav {
 .galleryItems {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 20px;
+  gap: var(--space-md);
+}
+.galleryItem h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5rem;
 }
 .galleryItem {
   position: relative;
@@ -482,7 +556,7 @@ nav {
   position: absolute;
   top: 20px;
   right: 30px;
-  color: white;
+  color: var(--light0);
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
@@ -519,7 +593,7 @@ nav {
   top: 20px;
   right: 30px;
   font-size: 2rem;
-  color: white;
+  color: var(--light0);
   cursor: pointer;
   background: rgba(0, 0, 0, 0.4);
   border: none;
@@ -535,7 +609,7 @@ nav {
 /* ================================== Section Video Section ========================== */
 
 .videoLink {
-  color: #333;
+  color: var(--dark3);
   text-decoration: none;
 }
 .videos {
@@ -577,7 +651,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  color: var(--light0);
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
@@ -594,7 +668,7 @@ nav {
 .product {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: var(--light2);
   position: relative;
   clip-path: polygon(0 0, 88% 0, 100% 100%, 0% 100%);
 }
@@ -602,7 +676,7 @@ nav {
 .payment {
   width: 500px;
   height: 500px;
-  background-color: #fff;
+  background-color: var(--light0);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -617,7 +691,7 @@ nav {
 }
 .payTitle {
   font-size: 20px;
-  color: lightgrey;
+  color: var(--light5);
 }
 label {
   font-size: 14px;
@@ -627,10 +701,10 @@ label {
   padding: 10px;
   margin: 10px 0px;
   border: none;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--dark5);
 }
 .payInput::placeholder {
-  color: lightgray;
+  color: var(--light5);
 }
 
 .cardIcons {
@@ -656,7 +730,7 @@ label {
   -webkit-box-shadow: 10px -17px 17px -7px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 10px -17px 17px -7px rgba(0, 0, 0, 0.6);
   background-color: #369e62;
-  color: white;
+  color: var(--light0);
   border: none;
   cursor: pointer;
 }
@@ -664,8 +738,8 @@ label {
   width: 20px;
   height: 20px;
   position: absolute;
-  background-color: gray;
-  color: white;
+  background-color: var(--dark5);
+  color: var(--light0);
   top: 10px;
   right: 10px;
   display: flex;
@@ -687,14 +761,14 @@ label {
 .productTitle {
   font-size: 75px;
   font-weight: 900;
-  color: grey;
+  color: var(--dark5);
 }
 .productDesc {
   font-style: 24px;
-  color: gray;
+  color: var(--dark5);
 }
 .productPrice {
-  color: grey;
+  color: var(--dark5);
 }
 .colors,
 .sizes {
@@ -705,15 +779,15 @@ label {
   width: 32px;
   height: 32px;
   border-radius: 5px;
-  background-color: black;
+  background-color: var(--dark0);
   margin-right: 10px;
   cursor: pointer;
-  border: 1px solid #333;
+  border: 1px solid var(--dark3);
   display: inline-block;
 }
 .color:nth-child(2) {
-  background-color: white;
-  border: 1px solid black;
+  background-color: var(--light0);
+  border: 1px solid var(--dark0);
 }
 .color:nth-child(3) {
   background-color: burlywood;
@@ -726,7 +800,7 @@ label {
 }
 .size {
   padding: 5px 20px;
-  border: 1px solid black;
+  border: 1px solid var(--dark0);
   margin-right: 10px;
   cursor: pointer;
   font-style: 20px;
@@ -734,21 +808,21 @@ label {
 .productButton {
   float: right;
   padding: 10px 20px;
-  background-color: black;
-  color: white;
+  background-color: var(--dark0);
+  color: var(--light0);
   font-weight: 600;
   cursor: pointer;
 }
 .productButton:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--light0);
+  color: var(--dark0);
 }
 .selectProduct {
-  border: 1px solid black;
+  border: 1px solid var(--dark0);
   padding: 5px;
   border-radius: 3px;
-  background-color: black;
-  color: white;
+  background-color: var(--dark0);
+  color: var(--light0);
   letter-spacing: 1px;
 }
 
@@ -858,6 +932,13 @@ label {
     width: 100%;
     height: auto;
     border-radius: 20px;
+  }
+  .sliderBg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 70%);
+    z-index: 2;
   }
 
   .sliderTitle {

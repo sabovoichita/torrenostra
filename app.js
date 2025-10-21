@@ -208,21 +208,14 @@ function lightDarkMode() {
   const toggle = document.querySelector(".toggle");
   const body = document.body;
 
-  // Set default mode
-  body.classList.add("dark");
+  // Start in light mode
+  body.classList.add("light");
 
   toggle.addEventListener("click", () => {
-    if (body.classList.contains("dark")) {
-      body.classList.replace("dark", "light");
-      toggle.classList.add("active");
-    } else {
-      body.classList.replace("light", "dark");
-      toggle.classList.remove("active");
-    }
+    body.classList.toggle("light");
+    body.classList.toggle("dark");
   });
 }
-
-// lightDarkMode();
 
 // ========== FUNCTION: Init ==========
 
