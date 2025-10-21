@@ -309,7 +309,13 @@ nav {
 }
 
 /* ================================== Section Slider Section========================== */
-
+.sliderSection,
+.reviewsSection,
+.gallerySection,
+.videosSection {
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
 .imagesArea {
   display: flex;
   align-items: end;
@@ -337,10 +343,10 @@ nav {
 }
 .slider {
   position: relative;
-  width: 100%;
   height: 70vh;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .sliderWrapper {
@@ -488,10 +494,7 @@ nav {
 }
 
 /* ================================== Section Reviews Section ========================== */
-.reviewsSection {
-  display: block;
-  box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
-}
+
 .reviews {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -526,12 +529,6 @@ nav {
 
 /* ================================== Section Gallery Section ========================== */
 
-.gallery {
-  padding: 50px;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
-}
 .galleryItems {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -681,6 +678,10 @@ nav {
 }
 /* ================================== Section Payment & Product Section========================== */
 
+.selectProducts {
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
 .product {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   height: 100vh;
@@ -688,7 +689,6 @@ nav {
   position: relative;
   clip-path: polygon(0 0, 88% 0, 100% 100%, 0% 100%);
 }
-
 .payment {
   width: 500px;
   height: 500px;
@@ -722,7 +722,6 @@ label {
 .payInput::placeholder {
   color: var(--light5);
 }
-
 .cardIcons {
   display: flex;
 }
@@ -845,12 +844,20 @@ label {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
+  background-color: var(--dark1);
+  color: var(--light6);
+}
+.footerLeft,
+.footerRight {
+  padding: 50px;
+  box-sizing: border-box;
 }
 .footerLeft {
   flex: 3;
   display: flex;
   justify-content: space-between;
-  padding: 50px;
+  flex-wrap: wrap;
 }
 .mapContainer {
   width: 100%;
@@ -881,10 +888,13 @@ footer .footerMenu iframe {
 
 .footerRight {
   flex: 1;
-  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.footerMenu,
+.footerRightMenu {
+  margin-bottom: 30px;
 }
 .fInput {
   padding: 5px;
@@ -896,11 +906,15 @@ footer .footerMenu iframe {
 }
 .fIcons {
   display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 .fIcon {
   width: 20px;
   height: 20px;
   margin-right: 20px;
+  background-color: var(--light0);
+  color: var(--dark0);
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
 .copyright {
@@ -989,27 +1003,22 @@ footer .footerMenu iframe {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .search {
     width: 100%;
     margin-top: 10px;
   }
-
   .limitedOffer {
     font-size: 16px;
   }
-
   .menuItem {
     font-size: 16px;
     margin-right: 15px;
     border-radius: 20px;
   }
-
   .slider {
     height: 60vh;
     clip-path: none;
   }
-
   .sliderBg {
     width: 100%;
     height: auto;
@@ -1022,35 +1031,44 @@ footer .footerMenu iframe {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 70%);
     z-index: 2;
   }
-
   .sliderTitle {
     font-size: 24px;
   }
-
   .sliderDesc {
     font-size: 16px;
   }
-
   .reviewsSection,
   .gallery,
   .videosSection {
     padding: 20px;
   }
-
   .video {
     padding-top: 56.25%;
   }
-
   .payButton {
     bottom: 0;
     position: relative;
   }
-
   .payment {
     width: 90%;
     height: auto;
     position: static;
     margin-top: 20px;
+  }
+  .footerLeft,
+  .footerRight {
+    padding: 15px;
+  }
+  .footerLeft {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footerRight {
+    margin-top: 20px;
+  }
+  .fIcons img {
+    width: 25px;
+    height: 25px;
   }
   .mapContainer {
     height: 150px;
@@ -1062,38 +1080,43 @@ footer .footerMenu iframe {
   body {
     font-size: 14px;
   }
-
   nav {
     padding: 10px 20px;
   }
-
   .menuItem {
     margin-right: 10px;
     font-size: 14px;
     border-radius: 20px;
   }
-
   .sliderTitle {
     font-size: 20px;
   }
-
   .sliderDesc {
     font-size: 14px;
   }
-
   .productTitle {
     font-size: 28px;
   }
-
   .productDesc {
     font-size: 14px;
   }
-
   .videos {
     grid-template-columns: 1fr;
   }
-
   .galleryItems {
     grid-template-columns: 1fr;
+  }
+  footer {
+    padding: 10px;
+  }
+  .footerLeft,
+  .footerRight {
+    padding: 10px;
+  }
+  .fMenuTitle {
+    font-size: 14px;
+  }
+  .fListItem {
+    font-size: 12px;
   }
 }
