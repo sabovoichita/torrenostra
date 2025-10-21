@@ -163,7 +163,6 @@ function setupImageOverlay() {
   const fullImage = document.getElementById("fullImage");
   const closeBtn = document.getElementById("closeBtn");
   const galleryImages = document.querySelectorAll(".galleryImg");
-  console.log("here");
   galleryImages.forEach((img) => {
     img.addEventListener("click", () => {
       fullImage.src = img.src;
@@ -179,6 +178,31 @@ function setupImageOverlay() {
   });
 }
 
+// ========== FUNCTION: SliderImage ==========
+
+function sliderImage() {
+  const sliderWrapper = document.querySelector(".sliderWrapper");
+  const rightArrow = document.querySelector(".arrowIcon.right");
+  const leftArrow = document.querySelector(".arrowIcon.left");
+  const slides = document.querySelectorAll(".sliderItem");
+
+  let currentIndex = 0;
+
+  function updateSlider() {
+    sliderWrapper.style.transform = `translateX(${-100 * currentIndex}vw)`;
+  }
+
+  rightArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  });
+
+  leftArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+}
+
 // ========== FUNCTION: Init ==========
 
 function init() {
@@ -190,6 +214,7 @@ function init() {
   closePayment();
   updateProduct(0);
   setupImageOverlay();
+  sliderImage();
 }
 
 // ========== RUN ==========
