@@ -312,7 +312,8 @@ nav {
 .sliderSection,
 .reviewsSection,
 .gallerySection,
-.videosSection {
+.videosSection,
+.productsSection {
   border-radius: 10px;
   box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -678,10 +679,6 @@ nav {
 }
 /* ================================== Section Payment & Product Section========================== */
 
-.selectProducts {
-  border-radius: 10px;
-  box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
-}
 .product {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   height: 100vh;
