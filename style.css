@@ -165,6 +165,14 @@ body.light .navBottom {
   background-color: var(--light4);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+body.dark .fIcon {
+  filter: invert(1);
+  opacity: 0.9;
+}
+body.light .fIcon {
+  filter: none;
+  opacity: 1;
+}
 .nav,
 .menuItem,
 .search,
@@ -893,6 +901,7 @@ footer .footerMenu iframe {
   width: 20px;
   height: 20px;
   margin-right: 20px;
+  transition: filter 0.3s ease, opacity 0.3s ease;
 }
 .copyright {
   font-weight: 300;
