@@ -38,22 +38,116 @@
   margin: 0;
 }
 
-body {
-  /* background-color: black; */
+body.dark {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease;
+}
+body.light {
+  background-color: white;
   color: black;
-  font-family: "Lato", sans-serif;
-  padding: 0;
-  margin: 0;
+  transition: all 0.3s ease;
+}
+
+body.dark .menuItem {
+  color: white;
+  border: 2px solid white;
+}
+body.light .menuItem {
+  color: black;
+  border: 2px solid black;
+  background-color: white;
+}
+body.dark .search {
+  color: black;
+  background-color: white;
+}
+body.light .search {
+  color: white;
+}
+body.dark .searchInput::placeholder {
+  color: black;
+  background-color: transparent;
+  opacity: 0.8;
+}
+body.light .searchInput::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+body.dark .limitedOffer {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+body.light .limitedOffer {
+  color: black;
+  border-bottom: 2px solid black;
+  background-color: white;
+}
+
+body.dark .visitButton {
+  background-color: white;
+  color: black;
+}
+body.light .visitButton {
+  background-color: black;
+  color: white;
+}
+body.light .imagesAreaH1 {
+  background-color: white;
+  color: black;
+}
+body.dark .imagesAreaH1 {
+  background-color: black;
+  color: white;
+}
+
+.toggle {
+  width: 50px;
+  height: 24px;
+  border-radius: 30px;
+  background-color: black;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle.active {
+  background-color: white;
+}
+
+.toggleBall {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle.active .toggleBall {
+  transform: translateX(-30px);
+  background-color: black;
+  /* color: white; */
 }
 
 /* ================================== section nav========================== */
 
 nav {
-  background-color: rgb(232, 232, 235);
-  color: black;
+  /* background-color: rgb(232, 232, 235); */
+  color: white;
   padding: 20px 50px;
 }
 .navTop {
+  /* background-color: rgb(232, 232, 235); */
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,7 +182,7 @@ nav {
 
 .limitedOffer {
   font-size: 20px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   cursor: pointer;
 }
 
@@ -108,29 +202,40 @@ nav {
 .searchInput::placeholder {
   color: black;
 }
-.toggle {
-  width: 40px;
-  height: 20px;
-  background-color: #fff;
+/* .toggle {
+  width: 50px;
+  height: 24px;
+  background-color: black;
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
   position: relative;
+  transition: background-color 0.3s ease;
+} */
+/* .toggle.active {
+  background-color: white;
 }
+.toggle.active .toggleBall {
+  transform: translateX(-20px);
+  background-color: black;
+} */
 .toggleIcon {
   color: goldenrod;
 }
-.toggleBall {
-  width: 18px;
-  height: 18px;
-  background-color: #333;
+/* .toggleBall {
+  width: 20px;
+  height: 20px;
+  background-color: black;
   position: absolute;
-  right: 1px;
+  right: 2px;
+  top: 2px;
   border-radius: 50%;
   cursor: pointer;
-}
+  transform: translateX(-20);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+} */
 .navBottom {
   display: flex;
   align-items: center;
@@ -139,12 +244,19 @@ nav {
 }
 .menuItem {
   margin-right: 10px;
-  color: black;
+  color: white;
+  background-color: black;
+
   border-radius: 10px;
   padding: 5px 10px;
-  box-shadow: 10px 5px 10px 7px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 5px 10px 7px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  border: 2px solid white;
 }
+/* .menuItem:active {
+  color: black;
+  background-color: white;
+} */
 
 /* ================================== Section Slider Section========================== */
 

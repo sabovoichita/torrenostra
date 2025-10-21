@@ -203,6 +203,27 @@ function sliderImage() {
   });
 }
 
+// ========== FUNCTION: lightDarkMode ==========
+function lightDarkMode() {
+  const toggle = document.querySelector(".toggle");
+  const body = document.body;
+
+  // Set default mode
+  body.classList.add("dark");
+
+  toggle.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+      body.classList.replace("dark", "light");
+      toggle.classList.add("active");
+    } else {
+      body.classList.replace("light", "dark");
+      toggle.classList.remove("active");
+    }
+  });
+}
+
+// lightDarkMode();
+
 // ========== FUNCTION: Init ==========
 
 function init() {
@@ -216,6 +237,7 @@ function init() {
   setupImageOverlay();
   sliderImage();
 }
+lightDarkMode();
 
 // ========== RUN ==========
 init();
