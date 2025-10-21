@@ -34,9 +34,9 @@
   font-weight: 900;
   font-style: normal;
 }
-* {
+/* * {
   margin: 0;
-}
+} */
 html {
   scroll-behavior: smooth;
 }
@@ -833,6 +833,71 @@ label {
   color: var(--light0);
   letter-spacing: 1px;
 }
+/* ========================= SECTION FOOTER SECTION ========================= */
+
+footer {
+  display: flex;
+}
+.footerLeft {
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.mapContainer {
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+footer .footerMenu iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.fMenuTitle {
+  font-size: 16px;
+  padding: 0;
+}
+.fList {
+  padding: 0;
+  list-style: none;
+}
+.fListItem {
+  margin-bottom: 10px;
+  color: var(--light5);
+  cursor: pointer;
+}
+
+.footerRight {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fInput {
+  padding: 5px;
+}
+.fButton {
+  padding: 5px;
+  background-color: var(--dark0);
+  color: var(--light0);
+}
+.fIcons {
+  display: flex;
+}
+.fIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.copyright {
+  font-weight: 300;
+  font-style: 14px;
+}
 
 /* ========================= SECTION RESPONSIVE DESIGN SECTION ========================= */
 
@@ -977,6 +1042,9 @@ label {
     height: auto;
     position: static;
     margin-top: 20px;
+  }
+  .mapContainer {
+    height: 150px;
   }
 }
 
