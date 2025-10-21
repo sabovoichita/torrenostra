@@ -42,15 +42,16 @@
       </div>
 
       <div class="navBottom">
-        <h3 class="menuItem">Home</h3>
-        <h3 class="menuItem">Images</h3>
-        <h3 class="menuItem">Activities</h3>
-        <h3 class="menuItem">Blog</h3>
-        <h3 class="menuItem">Contact</h3>
+        <a href="#home" class="menuItem">Home</a>
+        <a href="#gallery" class="menuItem">Images</a>
+        <a href="#activities" class="menuItem">Activities</a>
+        <a href="#videos" class="menuItem">Videos</a>
+        <a href="#products" class="menuItem">Products</a>
+        <a href="#contact" class="menuItem">Contact</a>
       </div>
     </nav>
 
-    <section class="slider">
+    <section id="home" class="slider">
       <div class="imagesArea">
         <div class="imagesAreaH1">
           <h1>Hello Torrenostra</h1>
@@ -111,8 +112,8 @@
       </div>
     </section>
 
-    <section class="reviewsSection">
-      <h1>Things to do</h1>
+    <section id="activities" class="reviewsSection">
+      <h1>Activities</h1>
       <div class="reviews">
         <div class="review">
           <img src="./images/r1.jpg" alt="" class="reviewImg" />
@@ -154,7 +155,6 @@
           <span class="reviewTitle">MARKET</span>
           <span class="reviewDesc">Tuesdays market</span>
         </div>
-
         <div class="review">
           <img src="./images/r9.jpg" alt="" class="reviewImg" />
           <span class="reviewTitle">PRAT</span>
@@ -205,9 +205,9 @@
       <span class="close">X</span>
     </section>
 
-    <section class="gallery">
+    <section id="gallery" class="gallery">
       <div class="galleryH1">
-        <h1>Best Images</h1>
+        <h1>Images</h1>
       </div>
       <div class="galleryItems">
         <div class="galleryItem">
@@ -234,63 +234,8 @@
       <img src="" alt="Fullscreen preview" class="fullImage" id="fullImage" />
     </div>
 
-    <!-- <div class="videos">
-     
-
-       <div class="video">
-        <a
-          href="https://youtube.com/shorts/Dsspp3M3q8k?feature=share"
-          target="_blank"
-          class="videoLink"
-        >
-          <h1>View Torrenostra 1</h1></a
-        >
-        <video width="320" height="240" autoplay muted controls>
-          <source src="videos/1.mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> -->
-
-    <!-- 
-      <div class="video">
-        <a href="https://youtu.be/3TNiflED78Y" target="_blank" class="videoLink"
-          ><h1>View Torrenostra 2</h1></a
-        >
-        <video width="320" height="240" autoplay muted controls>
-          <source src="videos/2.mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> -->
-
-    <!-- <div class="video">
-        <a
-          href="https://youtube.com/shorts/P-wWQmqZ0TE?feature=share"
-          target="_blank"
-          class="videoLink"
-          ><h1>View Torrenostra 3</h1></a
-        >
-        <video width="320" height="240" autoplay muted controls>
-          <source src="videos/3.mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> -->
-
-    <!-- <div class="video">
-        <a
-          href="https://youtube.com/shorts/FjaTV3idtM8?feature=share"
-          target="_blank"
-          class="videoLink"
-        >
-          <h1>View Torrenostra 4</h1>
-        </a>
-        <video width="320" height="240" autoplay muted controls>
-          <source src="videos/4.mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> -->
-
-    <section class="videosSection">
-      <div class="videosH1"><h1>View Torrenostra</h1></div>
+    <section id="videos" class="videosSection">
+      <div class="videosH1"><h1>Videos</h1></div>
       <!-- Torrenostra 1 -->
       <div class="videos">
         <div class="video">
@@ -363,9 +308,9 @@
       </div>
     </section>
 
-    <section class="selectProducts">
+    <section id="products" class="selectProducts">
       <div class="productButtons">
-        <h1>Order Your Memories</h1>
+        <h1>Products</h1>
         <div class="selectProductButtons">
           <button class="selectProduct">FamilyArt</button>
           <button class="selectProduct">Butterfly Art</button>
@@ -407,6 +352,7 @@
         </div>
       </div>
     </section>
+    <footer id="contact">FooterContactArea</footer>
   </body>
   <script src="app.js"></script>
 </html>

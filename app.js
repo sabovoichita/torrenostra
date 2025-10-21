@@ -217,6 +217,29 @@ function lightDarkMode() {
   });
 }
 
+// ========== FUNCTION: HighlightActiveSection ==========
+function highlightActiveSection() {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".menuItem");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  });
+}
+
 // ========== FUNCTION: Init ==========
 
 function init() {
@@ -229,7 +252,9 @@ function init() {
   updateProduct(0);
   setupImageOverlay();
   sliderImage();
+  highlightActiveSection();
 }
+
 lightDarkMode();
 
 // ========== RUN ==========
