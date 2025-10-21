@@ -135,7 +135,9 @@ body.dark .imagesAreaH1 {
 .toggle.active .toggleBall {
   transform: translateX(-30px);
   background-color: black;
-  /* color: white; */
+}
+.toggleIcon {
+  color: goldenrod;
 }
 
 /* ================================== section nav========================== */
@@ -202,40 +204,7 @@ nav {
 .searchInput::placeholder {
   color: black;
 }
-/* .toggle {
-  width: 50px;
-  height: 24px;
-  background-color: black;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.3s ease;
-} */
-/* .toggle.active {
-  background-color: white;
-}
-.toggle.active .toggleBall {
-  transform: translateX(-20px);
-  background-color: black;
-} */
-.toggleIcon {
-  color: goldenrod;
-}
-/* .toggleBall {
-  width: 20px;
-  height: 20px;
-  background-color: black;
-  position: absolute;
-  right: 2px;
-  top: 2px;
-  border-radius: 50%;
-  cursor: pointer;
-  transform: translateX(-20);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-} */
+
 .navBottom {
   display: flex;
   align-items: center;
@@ -253,10 +222,6 @@ nav {
   cursor: pointer;
   border: 2px solid white;
 }
-/* .menuItem:active {
-  color: black;
-  background-color: white;
-} */
 
 /* ================================== Section Slider Section========================== */
 
@@ -268,17 +233,10 @@ nav {
   z-index: 2;
 }
 .imagesAreaH1 {
-  /* position: absolute; */
-  /* left: 0; */
-  /* bottom: 0; */
   color: black;
   z-index: 2;
-  /* margin-top: 10px; */
-  /* padding-bottom: 30px; */
 }
 .changeButtons {
-  /* position: absolute; */
-  /* right: 0; */
   bottom: 0;
   z-index: 1;
 }
@@ -342,7 +300,6 @@ nav {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
-  /* border-radius: 50%; */
   z-index: 1;
 }
 .sliderTitle,
@@ -436,14 +393,12 @@ nav {
   z-index: 10;
   transition: opacity 0.3s;
 }
-
 .arrowIcon:hover {
   opacity: 1;
 }
 .arrowIcon.left {
   left: 30px;
 }
-
 .arrowIcon.right {
   right: 30px;
 }
@@ -590,17 +545,14 @@ nav {
   border-radius: 10px;
   box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .video {
   position: relative;
-  /* display: flex; */
   padding-top: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .videosH1 {
-  /* position: static; */
   left: 0;
   top: 0;
 }
