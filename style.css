@@ -923,16 +923,26 @@ footer .footerMenu iframe {
 
 /* Large tablets / small laptops */
 @media (max-width: 1200px) {
+  section {
+    padding: var(--space-md) var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+  section h1 {
+    padding: 0 var(--space-md);
+    margin-bottom: var(--space-sm);
+  }
+  .galleryItem {
+    padding: 0;
+    box-shadow: none;
+  }
   .menuItem {
     margin-right: 30px;
     font-size: 18px;
   }
-
   .productDetails {
     width: 50%;
     top: 5%;
   }
-
   .productTitle {
     font-size: 50px;
   }
@@ -940,6 +950,13 @@ footer .footerMenu iframe {
 
 /* Tablets */
 @media (max-width: 992px) {
+  section {
+    padding: var(--space-sm) var(--space-xs);
+    /* margin-bottom: var(--space-xs); */
+  }
+  section h1 {
+    margin: 0 var(--space-xs);
+  }
   nav {
     padding: 15px 30px;
   }
@@ -964,6 +981,9 @@ footer .footerMenu iframe {
   .visitButton {
     font-size: 20px;
   }
+  .review {
+    padding: var(--space-xs);
+  }
 
   .reviews {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -971,6 +991,9 @@ footer .footerMenu iframe {
 
   .galleryItems {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .galleryItem h1 {
+    margin-top: 0;
   }
 
   .product {
@@ -1037,7 +1060,7 @@ footer .footerMenu iframe {
   .reviewsSection,
   .gallery,
   .videosSection {
-    padding: 20px;
+    /* padding: 20px; */
   }
   .video {
     padding-top: 56.25%;
