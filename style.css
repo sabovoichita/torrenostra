@@ -10,25 +10,21 @@
   font-weight: 100;
   font-style: normal;
 }
-
 .lato-light {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-
 .lato-regular {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .lato-bold {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-
 .lato-black {
   font-family: "Lato", sans-serif;
   font-weight: 900;
@@ -39,6 +35,10 @@
 } */
 html {
   scroll-behavior: smooth;
+}
+html,
+body {
+  overflow-x: hidden;
 }
 :root {
   --space-xs: 10px;
@@ -87,7 +87,6 @@ body.light {
   color: var(--dark2);
   transition: all 0.3s ease;
 }
-
 body.dark .menuItem {
   color: var(--light0);
   border: 2px solid var(--light0);
@@ -119,18 +118,15 @@ body.light .searchInput::placeholder {
   color: var(--light0);
   opacity: 0.7;
 }
-
 body.dark .limitedOffer {
   color: var(--light1);
   border-bottom: 2px solid var(--light1);
 }
-
 body.light .limitedOffer {
   color: var(--dark0);
   border-bottom: 2px solid var(--dark0);
   background-color: var(--light0);
 }
-
 body.dark .visitButton {
   background-color: var(--light1);
   color: var(--dark1);
@@ -182,7 +178,6 @@ body.light .fIcon {
 .limitedOffer {
   transition: all 0.4s ease;
 }
-
 .toggle {
   width: 50px;
   height: 24px;
@@ -196,11 +191,9 @@ body.light .fIcon {
   padding: 0 4px;
   transition: background-color 0.3s ease;
 }
-
 .toggle.active {
   background-color: var(--light0);
 }
-
 .toggleBall {
   width: 20px;
   height: 20px;
@@ -211,7 +204,6 @@ body.light .fIcon {
   top: 2px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 .toggle.active .toggleBall {
   transform: translateX(-30px);
   background-color: var(--dark0);
@@ -223,18 +215,15 @@ body.light .fIcon {
 /* ================================== section nav========================== */
 
 nav {
-  /* background-color: rgb(232, 232, 235); */
   color: var(--light0);
   padding: 20px 50px;
 }
 .navTop {
-  /* background-color: rgb(232, 232, 235); */
   color: var(--light0);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .navleft {
   display: flex;
   align-items: center;
@@ -247,13 +236,11 @@ nav {
   justify-content: flex-end;
   flex: 1;
 }
-
 .navleft .navItem,
 .navright .search,
 .navright .toggle {
   margin: 0 10px;
 }
-
 .navItem img {
   display: block;
   width: 150px;
@@ -261,13 +248,11 @@ nav {
   border-radius: 50%;
   object-fit: cover;
 }
-
 .limitedOffer {
   font-size: 20px;
   border-bottom: 2px solid var(--light0);
   cursor: pointer;
 }
-
 .search {
   display: flex;
   align-items: center;
@@ -284,7 +269,6 @@ nav {
 .searchInput::placeholder {
   color: var(--dark0);
 }
-
 .navBottom {
   display: flex;
   align-items: center;
@@ -309,6 +293,7 @@ nav {
 }
 
 /* ================================== Section Slider Section========================== */
+
 .sliderSection,
 .reviewsSection,
 .gallerySection,
@@ -347,35 +332,28 @@ nav {
   height: 70vh;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .sliderWrapper {
   display: flex;
   height: 100%;
-  transition: all 0.8s ease-in-out;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.15)
-  );
+  transition: transform 0.8s ease-in-out;
+  overflow: hidden;
+  gap: 0;
+  width: calc(100vw * 5);
 }
 .sliderItem {
+  width: 100vw;
+  flex-shrink: 0;
   height: 100%;
-  min-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   position: relative;
 }
-
 .sliderBg {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-
 .sliderImg {
   width: 100%;
   height: 100%;
@@ -387,7 +365,6 @@ nav {
 .sliderImg:hover {
   transform: scale(1.05);
 }
-
 .sliderImg {
   max-width: 100%;
   max-height: 100%;
@@ -421,7 +398,6 @@ nav {
   border-radius: 10px;
   cursor: pointer;
   font-size: 2rem;
-
   transition: all 0.3s ease;
 }
 .visitButton:hover {
@@ -472,7 +448,6 @@ nav {
 .sliderItem:nth-child(5) .sliderDesc {
   color: #a0c8ff;
 }
-
 .arrowIcon {
   position: absolute;
   top: 50%;
@@ -615,7 +590,6 @@ nav {
   padding: 8px 14px;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 #closeBtn:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.1);
@@ -644,7 +618,6 @@ nav {
   left: 0;
   top: 0;
 }
-
 .video iframe {
   position: absolute;
   top: 0;
@@ -654,7 +627,6 @@ nav {
   border: none;
   border-radius: 16px;
 }
-
 .video .overlay {
   position: absolute;
   top: 0;
@@ -673,10 +645,10 @@ nav {
   transition: opacity 0.3s ease;
   border-radius: 16px;
 }
-
 .video:hover .overlay {
   opacity: 1;
 }
+
 /* ================================== Section Payment & Product Section========================== */
 
 .product {
@@ -837,6 +809,7 @@ label {
   color: var(--light0);
   letter-spacing: 1px;
 }
+
 /* ========================= SECTION FOOTER SECTION ========================= */
 
 footer {
@@ -863,7 +836,6 @@ footer {
   border-radius: 10px;
   overflow: hidden;
 }
-
 footer .footerMenu iframe {
   width: 100%;
   height: 100%;
@@ -882,7 +854,6 @@ footer .footerMenu iframe {
   color: var(--light5);
   cursor: pointer;
 }
-
 .footerRight {
   flex: 1;
   display: flex;
@@ -960,58 +931,47 @@ footer .footerMenu iframe {
   nav {
     padding: 15px 30px;
   }
-
   .navBottom {
     flex-wrap: wrap;
     gap: 10px;
   }
-
   .slider {
     height: 70vh;
   }
-
   .sliderTitle {
     font-size: 30px;
   }
-
   .sliderDesc {
     font-size: 20px;
   }
-
   .visitButton {
     font-size: 20px;
   }
   .review {
     padding: var(--space-xs);
   }
-
   .reviews {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-
   .galleryItems {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   .galleryItem h1 {
     margin-top: 0;
   }
-
   .product {
     height: auto;
     clip-path: none;
     padding-bottom: 30px;
   }
-
   .productImg {
     width: 80%;
   }
-
   .productDetails {
     width: 100%;
     position: static;
     padding: 20px;
   }
-
   .productTitle {
     font-size: 40px;
   }
@@ -1057,11 +1017,11 @@ footer .footerMenu iframe {
   .sliderDesc {
     font-size: 16px;
   }
-  .reviewsSection,
+  /* .reviewsSection,
   .gallery,
   .videosSection {
     /* padding: 20px; */
-  }
+  /* } */
   .video {
     padding-top: 56.25%;
   }
