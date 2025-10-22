@@ -522,7 +522,7 @@ nav {
 }
 .galleryItem h1 {
   text-align: center;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   font-size: 1.5rem;
 }
 .galleryItem {
@@ -942,7 +942,7 @@ footer .footerMenu iframe {
   }
   section h1 {
     padding: 0 var(--space-md);
-    margin-bottom: var(--space-sm);
+    /* margin-bottom: var(--space-sm); */
   }
   .galleryItem {
     padding: 0;
