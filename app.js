@@ -31,18 +31,6 @@ const products = [
   },
   {
     id: 2,
-    title: "Heart Art",
-    price: 150,
-    colors: [
-      { code: "burlywood", img: "./images/p3-wood.jpg" },
-      { code: "turquoise", img: "./images/p3-turquoise.png" },
-      { code: "black", img: "./images/p3-black.png" },
-      { code: "white", img: "./images/p3-white.png" },
-      { code: "purple", img: "./images/p3-purple.png" },
-    ],
-  },
-  {
-    id: 3,
     title: "Butterfly Art",
     price: 25,
     colors: [
@@ -53,6 +41,19 @@ const products = [
       { code: "purple", img: "./images/p2-purple.png" },
     ],
   },
+  {
+    id: 3,
+    title: "Heart Art",
+    price: 150,
+    colors: [
+      { code: "burlywood", img: "./images/p3-wood.jpg" },
+      { code: "turquoise", img: "./images/p3-turquoise.png" },
+      { code: "black", img: "./images/p3-black.png" },
+      { code: "white", img: "./images/p3-white.png" },
+      { code: "purple", img: "./images/p3-purple.png" },
+    ],
+  },
+
   {
     id: 4,
     title: "Wind Chime",
