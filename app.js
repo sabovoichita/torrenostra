@@ -240,6 +240,23 @@ function highlightActiveSection() {
     });
   });
 }
+// ========== FUNCTION: Setup Footer Product Links ==========
+function setupFooterProductLinks() {
+  const footerLinks = document.querySelectorAll(".footerProductLink");
+
+  footerLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const index = parseInt(link.dataset.product);
+      updateProduct(index);
+
+      const productSection = document.querySelector("#products");
+      if (productSection) {
+        productSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+}
 
 // ========== FUNCTION: Init ==========
 
@@ -254,6 +271,7 @@ function init() {
   setupImageOverlay();
   sliderImage();
   highlightActiveSection();
+  setupFooterProductLinks();
 }
 
 lightDarkMode();
