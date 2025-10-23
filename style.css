@@ -1165,23 +1165,64 @@ footer .footerMenu iframe {
     position: static;
     margin-top: 20px;
   }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .footerLeft,
   .footerRight {
-    padding: 15px;
+    padding: 30px 20px;
+    width: 100%;
   }
   .footerLeft {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
   }
-  .footerRight {
-    margin-top: 20px;
+  .footerMenu {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .fMenuTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   .fIcons img {
     width: 25px;
     height: 25px;
   }
   .mapContainer {
-    height: 150px;
+    width: 100%;
+    height: 180px;
+  }
+  .fListItem {
+    font-size: 15px;
+  }
+  .footerRight {
+    align-items: center;
+  }
+  .fMAil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .finput {
+    width: 80%;
+    max-width: 300px;
+  }
+  .fButton {
+    width: auto;
+    padding: 8px 16px;
+  }
+  .fIcons {
+    justify-content: center;
+  }
+  .fIcon {
+    margin-right: 0;
+  }
+  .copyright {
+    font-size: 13px;
   }
 }
 
@@ -1282,16 +1323,46 @@ footer .footerMenu iframe {
     padding: 10px;
   }
   footer {
-    padding: 10px;
+    text-align: center;
   }
   .footerLeft,
   .footerRight {
-    padding: 10px;
+    padding: 20px 10px;
+  }
+  .footerMenu {
+    width: 100%;
+    margin-bottom: 25px;
   }
   .fMenuTitle {
-    font-size: 14px;
+    font-size: 16px;
   }
   .fListItem {
+    font-size: 14px;
+  }
+  .mapContainer {
+    height: 160px;
+  }
+  .fMAil {
+    width: 100%;
+    gap: 8px;
+  }
+  .finput {
+    width: 90%;
+    max-width: none;
+    font-size: 14px;
+  }
+  .fButton {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .fIcons {
+    gap: 10px;
+  }
+  .fIcon {
+    width: 18px;
+    height: 18px;
+  }
+  .copyright {
     font-size: 12px;
   }
 }
