@@ -967,9 +967,6 @@ footer .footerMenu iframe {
     padding: var(--space-sm) var(--space-xs);
     /* margin-bottom: var(--space-xs); */
   }
-  section h1 {
-    margin: 0 var(--space-xs);
-  }
   nav {
     padding: 15px 30px;
   }
