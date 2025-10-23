@@ -87,6 +87,12 @@ body.light {
   color: var(--dark2);
   transition: all 0.3s ease;
 }
+body.dark .navTop {
+  background-color: var(--dark1);
+}
+body.dark .navItem h1 a {
+  color: var(--light0);
+}
 body.dark .menuItem {
   color: var(--light0);
   border: 2px solid var(--light0);
@@ -141,11 +147,14 @@ body.light .visitButton {
   background-color: var(--light5);
 } */
 body.dark .toggle {
-  background-color: var(--dark2);
-  border: 2px solid var(--light1);
+  /* background-color: var(--dark2);
+  border: 2px solid var(--light1); */
+  background-color: var(--light0);
 }
 body.dark .toggleBall {
-  background-color: var(--light1);
+  /* background-color: var(--light1); */
+  background-color: var(--dark0);
+  transform: translateX(26px);
 }
 body.light .imagesAreaH1 {
   background-color: var(--light0);
@@ -181,15 +190,15 @@ body.light .fIcon {
 .toggle {
   width: 50px;
   height: 24px;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: var(--dark0);
   position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 4px;
-  transition: background-color 0.3s ease;
+  padding: 0 6px;
+  box-sizing: border-box;
 }
 .toggle.active {
   background-color: var(--light0);
@@ -197,11 +206,11 @@ body.light .fIcon {
 .toggleBall {
   width: 20px;
   height: 20px;
+  background-color: var(--light0);
   border-radius: 50%;
-  background-color: var(--dark0);
   position: absolute;
-  right: 2px;
   top: 2px;
+  left: 3px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .toggle.active .toggleBall {
@@ -219,10 +228,20 @@ nav {
   padding: 20px 50px;
 }
 .navTop {
-  color: var(--light0);
+  /* color: var(--light0); */
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: var(--light0);
+  transition: background-color 0.3s ease;
+}
+.navItem h1 a {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--dark0);
+  text-decoration: none;
 }
 .navleft {
   display: flex;
@@ -1038,8 +1057,25 @@ footer .footerMenu iframe {
 /* Phones */
 @media (max-width: 768px) {
   .navTop {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+  .navItem h1 a {
+    font-size: 22px;
+    color: goldenrod;
+  }
+  body.dark .navItem h1 a {
+    color: var(--light0);
+  }
+  .toggle {
+    background-color: goldenrod;
+    z-index: 100;
+  }
+  .toggleBall {
+    background-color: white;
   }
   .search {
     width: 100%;
@@ -1154,7 +1190,26 @@ footer .footerMenu iframe {
   body {
     font-size: 14px;
   }
-
+  .navTop {
+    flex-wrap: wrap;
+    padding: 8px 15px;
+    gap: 8px;
+  }
+  .navItem h1 a {
+    font-size: 20px;
+  }
+  .toggle {
+    width: 45px;
+    height: 22px;
+    background-color: goldenrod;
+  }
+  .toggleBall {
+    width: 18px;
+    height: 18px;
+  }
+  body.dark .toggleBall {
+    transform: translateX(21px);
+  }
   .menuItem {
     margin-right: 10px;
     font-size: 14px;
