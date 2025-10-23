@@ -304,6 +304,9 @@ nav {
   cursor: pointer;
   border: 2px solid var(--light0);
 }
+a.menuItem {
+  text-decoration: none;
+}
 .menuItem.active {
   border-bottom: 2px solid currentColor;
   font-weight: bold;
